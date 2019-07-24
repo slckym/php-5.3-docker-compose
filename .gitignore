@@ -1,0 +1,4 @@
+/www/*
+/sessions/*
+/tmp
+/data/mysql/*
