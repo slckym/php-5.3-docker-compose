@@ -39,6 +39,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN apt-get install -y \
+         libzip-dev \
+         && docker-php-ext-install zip
+
 WORKDIR /var/www/html
 
 EXPOSE 80
